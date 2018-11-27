@@ -1,0 +1,34 @@
+<div *ngIf="subject">
+<div class="mat-app-background form-container">
+  <mat-form-field>
+    <input matInput [(ngModel)]="subject.id" placeholder="Subject ID" disabled>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" [(value)]="theDate.value" placeholder="修改日期" disabled>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select placeholder="科目" [(value)]="subject.category">
+      <mat-option value="YUWEN">语文</mat-option>
+      <mat-option value="SHUXUE">数学</mat-option>
+      <mat-option value="YINGYU">英文</mat-option>
+      <mat-option value="ZONGHE">综合</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="subject.name" placeholder="Subject Name"></textarea>
+  </mat-form-field>
+  
+  <input type="file" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" class="inputInput"/>
+  
+  <img *ngIf="subject.pictureBase64" [src]="subject.pictureBase64"/>
+  <br/>
+
+  <button mat-flat-button color="primary" (click)="save()">Save</button>
+  <button mat-flat-button color="accent"  (click)="goBack();">Cancel</button>
+</div>
+</div>

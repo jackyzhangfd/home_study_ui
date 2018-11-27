@@ -1,0 +1,9 @@
+<!--search start here-->
+<div class="search">
+	<i> </i>
+	<div class="s-bar">
+		<input type="text" [(ngModel)]="searchTerm" placeholder="Search Term">
+		<input type="submit"  value="Search" (click)="search()"/>
+	</div>
+	<p><a routerLink="/subjects" >  All Subjects </a></p>
+</div>

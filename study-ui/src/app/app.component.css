@@ -1,0 +1,15 @@
+.pageheader{
+	width: 100%;
+	text-align: right;
+    position: relative;
+	margin: 0 -5px 5px;
+}
+.pageheaderbtn{
+	margin-top: 5px;
+	margin-left:10px;
+}
+.pageheaderbtnleft{
+	margin-top: 5px;
+	margin-left:10px;
+	float:left;
+}

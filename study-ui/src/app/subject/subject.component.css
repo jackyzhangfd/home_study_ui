@@ -1,0 +1,18 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 20px 50px 20px 50px;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.inputInput{
+ /* 
+  font-size:100px; 
+  opacity:0; 
+  filter:alpha(opacity=0);
+*/
+}
